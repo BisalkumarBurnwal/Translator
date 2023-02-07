@@ -66,16 +66,6 @@ icons.forEach(icon => {
                 navigator.clipboard.writeText(toText.value);  // copy from totext
             }
              }
-        else {
-            let utterance;
-            if(target.id == "from") {
-                utterance = new SpeechSynthesisUtterance(fromText.value);
-                utterance.lang = selectTag[0].value;     // // selecting utterance language
-            } else {
-                utterance = new SpeechSynthesisUtterance(toText.value);
-                utterance.lang = selectTag[1].value;   // selecting utterance language
-            }
-            speechSynthesis.speak(utterance); // speak the passed text
-        }
+        
     });
 });
